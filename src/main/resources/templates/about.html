@@ -14,7 +14,7 @@
 
     <link rel="shortcut icon" href="/Assets/User/images/Fav.png">
 
-    <!-- Bootstrap core CS -->
+    <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="/Assets/User/css/bootstrap.min.css" type="text/css">
 
     <!--Material Icon -->
@@ -57,11 +57,11 @@
             </div>
             <div class="buy-button">
                 <th:block th:if="${user==NULL}">
-							<a th:href="@{'/login'}" class="btn btn-primary"><i class="bi bi-person-fill"></i>Sign In</a>
-						</th:block>
-						<th:block th:if="${user!=null}">
-							<a href="/login" class="btn btn-primary"><i class="bi bi-person-fill"></i>Log Out</a>
-						</th:block>
+                    <a th:href="@{'/login'}" class="btn btn-primary"><i class="bi bi-person-fill"></i>Sign In</a>
+                </th:block>
+                <th:block th:if="${user!=null}">
+                    <a href="/login" class="btn btn-primary"><i class="bi bi-person-fill"></i>Log Out</a>
+                </th:block>
             </div>
             <!--end login button-->
             <!-- End Logo container-->
@@ -107,7 +107,7 @@
     <!-- Navbar End -->
 
     <!-- Start home -->
-   <!-- Start home -->
+    <!-- Start home -->
     <section class="bg-half page-next-level">
         <div class="bg-overlay"></div>
         <div class="container">
