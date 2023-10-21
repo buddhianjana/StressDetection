@@ -1,0 +1,13 @@
+[2023-10-19 00:01:26,160] http-nio-8080-exec-2 com.example.demo.Controller.frontPageController 94 INFO   - Loaded doctor details for ID: 1
+[2023-10-19 00:01:45,718] http-nio-8080-exec-1 com.example.demo.Controller.frontPageController 94 INFO   - Loaded doctor details for ID: 1
+[2023-10-19 00:03:09,036] http-nio-8080-exec-4 com.example.demo.Controller.frontPageController 94 INFO   - Loaded doctor details for ID: 1
+[2023-10-19 00:05:41,688] http-nio-8080-exec-10 com.example.demo.Controller.frontPageController 94 INFO   - Loaded doctor details for ID: 2
+[2023-10-19 00:06:23,434] http-nio-8080-exec-1 com.example.demo.Controller.frontPageController 94 INFO   - Loaded doctor details for ID: 2
+[2023-10-19 00:07:58,292] http-nio-8080-exec-2 com.example.demo.Controller.frontPageController 94 INFO   - Loaded doctor details for ID: 2
+[2023-10-19 00:08:18,731] http-nio-8080-exec-2 com.example.demo.Controller.frontPageController 94 INFO   - Loaded doctor details for ID: 2
+[2023-10-19 00:09:29,855] http-nio-8080-exec-3 com.example.demo.Controller.AdminController 103 INFO   - Accessed the manage role page
+[2023-10-19 00:10:06,717] http-nio-8080-exec-9 com.example.demo.Controller.AdminController 103 INFO   - Accessed the manage role page
+[2023-10-19 00:12:35,475] http-nio-8080-exec-6 com.example.demo.Controller.frontPageController 94 INFO   - Loaded doctor details for ID: 1
+[2023-10-19 00:49:38,988] http-nio-8080-exec-4 com.example.demo.Controller.frontPageController 190 INFO   - Registration failed for user with email: maduraprasa00@gmail.com - Email already exists
+[2023-10-19 00:49:46,550] http-nio-8080-exec-1 com.example.demo.Controller.frontPageController 200 INFO   - User registered successfully with email: maduraprasa000@gmail.com
+[2023-10-19 01:02:25,827] http-nio-8080-exec-4 com.example.demo.Controller.frontPageController 94 INFO   - Loaded doctor details for ID: 1

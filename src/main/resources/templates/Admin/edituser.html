@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOCSHED Admin</title>
+	<link rel="shortcut icon" type="image/png" href="../../assets/Admin/images/logos/Fav 2.png" />
+	<link rel="stylesheet" href="../../assets/Admin/css/styles.min.css" />
+</head>
+
+<body>
+	<!--  Body Wrapper -->
+	<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+		data-sidebar-position="fixed" data-header-position="fixed">
+		<!-- Sidebar Start -->
+		<aside class="left-sidebar">
+			<!-- Sidebar scroll-->
+			<div>
+				<div class="brand-logo d-flex align-items-center justify-content-between">
+					<a href="/Admin/index.html" class="text-nowrap logo-img">
+						<br>
+						<img src="../../assets/Admin/images/logos/LOGO-dark.png" width="180" alt="" />
+					</a>
+					<div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+						<i class="ti ti-x fs-8"></i>
+					</div>
+				</div>
+				<!-- Sidebar navigation-->
+				<nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+					<ul id="sidebarnav">
+						<li class="nav-small-cap">
+							<i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+							<span class="hide-menu"></span>
+						</li>
+						<li class="sidebar-item">
+							<a class="sidebar-link" th:href="@{'/admin/'}" aria-expanded="false">
+								<span>
+									<i class="ti ti-layout-dashboard"></i>
+								</span>
+								<span class="hide-menu">Dashboard</span>
+							</a>
+						</li>
+						<li class="nav-small-cap">
+							<i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+							<span class="hide-menu"></span>
+						</li>
+						<li class="sidebar-item">
+							<a class="sidebar-link" th:href="@{'/admin/manage'}" aria-expanded="false">
+								<span>
+									<i class="ti ti-article"></i>
+								</span>
+								<span class="hide-menu">Manage Role</span>
+							</a>
+						</li>
+						<li class="sidebar-item">
+							<a class="sidebar-link" th:href="@{'/admin/appointment'}" aria-expanded="false">
+								<span>
+									<i class="ti ti-alert-circle"></i>
+								</span>
+								<span class="hide-menu">Appointments</span>
+							</a>
+						</li>
+						<li class="sidebar-item">
+							<a class="sidebar-link" th:href="@{'/admin/message'}" aria-expanded="false">
+								<span>
+									<i class="ti ti-cards"></i>
+								</span>
+								<span class="hide-menu">Messages</span>
+							</a>
+						</li>
+						<li class="nav-small-cap">
+							<i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+							<span class="hide-menu"></span>
+						</li>
+						<li class="sidebar-item">
+							<a class="sidebar-link" href="/logout" aria-expanded="false">
+								<span>
+									<i class="ti ti-login"></i>
+								</span>
+								<span class="hide-menu">Log out</span>
+							</a>
+						</li>
+				</nav>
+				<!-- End Sidebar navigation -->
+			</div>
+			<!-- End Sidebar scroll-->
+		</aside>
+		<!--  Sidebar End -->
+		<!--  Main wrapper -->
+		<div class="body-wrapper">
+			<!--  Header Start -->
+			<header class="app-header">
+				<nav class="navbar navbar-expand-lg navbar-light">
+					<ul class="navbar-nav">
+						<li class="nav-item d-block d-xl-none">
+							<a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse"
+								href="javascript:void(0)">
+								<i class="ti ti-menu-2"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link nav-icon-hover" href="javascript:void(0)">
+								<i class="ti ti-bell-ringing"></i>
+								<div class="notification bg-primary rounded-circle"></div>
+							</a>
+						</li>
+					</ul>
+					<div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+						<ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+
+							<li class="nav-item dropdown">
+								<a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
+									data-bs-toggle="dropdown" aria-expanded="false">
+									<img src="../assets/Admin/images/profile/user-1.jpg" alt="" width="35" height="35"
+										class="rounded-circle">
+								</a>
+								<div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
+									aria-labelledby="drop2">
+									<div class="message-body">
+
+										<a href="/Admin/authentication-login.html"
+											class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+			<!--  Header End -->
+
+
+
+			<!--  Button-->
+			<div class="container-fluid">
+				<div class="container-fluid">
+				</div>
+			</div>
+			<!--  Button End-->
+			<br>
+			<div class="col-lg-12 d-flex align-items-stretch">
+				<div class="card w-100">
+					<div class="card-body p-4">
+						<h5 class="card-title fw-semibold mb-4">Add Users</h5>
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col-lg-10">
+									<form class="login-form" th:action="@{/admin/editUsers/{id}(id=${user.id})}" th:object="${user}" method="post">
+									<div class="rounded shadow bg-white p-4">
+										<div class="custom-form">
+											<div id="message3"></div>
+											<form method="post" name="contact-form" id="contact-form3">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group app-label mt-2">
+															<label class="text-muted">First Name</label>
+															<input id="email-address" type="text"  name="firstName"
+																class="form-control resume" placeholder="" th:field="*{firstName}">
+														</div>
+													</div>
+
+													<div class="col-md-6">
+														<div class="form-group app-label mt-2">
+															<label class="text-muted">Last Name</label>
+															<input id="number" type="text" class="form-control resume"
+																placeholder="" name="lastName" th:field="*{lastName}">
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group app-label mt-2">
+															<label class="text-muted">Email Address</label>
+															<input id="email-address" type="text"
+																class="form-control resume" placeholder="" name="email" th:field="*{email}">
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="form-group app-label mt-2">
+															<label class="text-muted">Role</label>
+															<div class="form-button">
+																<select class="nice-select rounded" name="role" th:field="*{role}">
+																	<option value="ROLE_USER">USER</option>
+																	<option value="ROLE_ADMIN">ADMIN</option>
+																	<option value="ROLE_DOCTOR">DOCTOR</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group app-label mt-2">
+													<label class="text-muted">Password</label>
+													<input type="text" class="form-control resume"
+														placeholder="" name="password" readonly th:field="*{password}">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-12 mt-2">
+												<button class="btn btn-outline-primary m-3" type="submit">Update User</button>
+											</div>
+										</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	   <script>
+     setTimeout(function () {
+        // Hide the error message (if present)
+        var errorMessage = document.getElementById('successMessage');
+        if (errorMessage) {
+            errorMessage.style.display = 'none';
+        }
+
+        // Hide the logout message (if present)
+        var logoutMessage = document.getElementById('existMessage');
+        if (logoutMessage) {
+            logoutMessage.style.display = 'none';
+        }
+    }, 5000); // 5000 milliseconds = 5 seconds
+</script>
+	<div class="py-6 px-6 text-center">
+		<p class="mb-0 fs-4">Design and Developed By DOCSHED</p>
+	</div>
+	</div>
+	</div>
+	</div>
+	<script src="../../assets/Admin/libs/jquery/dist/jquery.min.js"></script>
+	<script src="../../assets/Admin/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="../../assets/Admin//js/sidebarmenu.js"></script>
+	<script src="../../assets/Admin/js/app.min.js"></script>
+	<script src="../../assets/Admin/libs/apexcharts/dist/apexcharts.min.js"></script>
+	<script src="../../assets/Admin/libs/simplebar/dist/simplebar.js"></script>
+	<script src="../../assets/Admin/js/dashboard.js"></script>
+</body>
+
+</html>
